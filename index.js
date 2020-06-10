@@ -96,7 +96,33 @@ app.get('/api/whistleblowers', authCheck, (req,res) => {
         }];
 
     res.json(whistleBlowers);
-})
+});
+
+app.get('/api/meetups', authCheck, (req,res) => {
+    let meetups = [
+        {
+            name: 'WhistleBlower London Meetup',
+            date: '25, May 2017'
+        },
+        {
+            name: 'WhistleBlower Lagos Meetup',
+            date: '5, August 2017'
+        },
+        {
+            name: 'WhistleBlower Nairobi Meetup',
+            date: '15, September 2017'
+        },
+        {
+            name: 'WhistleBlower Utah Meetup',
+            date: '20, August 2017'
+        },
+        {
+            name: 'WhistleBlower Oslo Meetup',
+            date: '7, October 2017'
+        }];
+
+    res.json(meetups);
+});
 
 
 
