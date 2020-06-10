@@ -27,3 +27,40 @@ const authCheck = jwt({
 });
 
 
+app.get('/api/activities', (req, res) => {
+    let whistleBlowerActivities = [
+        {
+            title: '200 Million dollars cash found in Burger King, Utah',
+            location: 'Salt Lake City, Utah, America'
+        },
+        {
+            title: '52 billion naira found by EFCC in a Bungalow in Ikoyi',
+            location: 'Lagos, Nigeria',
+        },
+        {
+            title: '2 Million Kenyan Shillings found in Yaya Supermarket laundry',
+            location: 'Nairobi, Kenya',
+        },
+        {
+            title: '10 Ferraris discovered in underground apartment in Bueno Aires',
+            location: 'Bueno Aires, Argentina',
+        },
+        {
+            title: 'Central Bank Printing Machine found in a church at Guanajuato',
+            location: 'Guanajuato, Mexico',
+        },
+        {
+            title: "32 Million Cedis cash found in Senator Daula's home in Accra",
+            location: 'Accra, Ghana',
+        }];
+
+    res.json(whistleBlowerActivities);
+})
+
+
+
+
+app.listen(3333);
+console.log('Listening on localhost:3333');
+
+
