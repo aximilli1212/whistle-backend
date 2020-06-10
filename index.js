@@ -55,6 +55,47 @@ app.get('/api/activities', (req, res) => {
         }];
 
     res.json(whistleBlowerActivities);
+});
+
+app.get('/api/whistleblowers', authCheck, (req,res) => {
+    let whistleBlowers = [
+        {
+            id: 1111,
+            name: 'Mark Fish',
+            level: 'Junior Whistle Blower',
+            avatar: 'http://svgavatars.com/style/svg/11.svg',
+            uncoveredSpoils: 2
+        },
+        {
+            id: 1112,
+            name: 'Garly Sticker',
+            level: 'Intermediate Whistle Blower',
+            avatar: 'http://svgavatars.com/style/svg/01.svg',
+            uncoveredSpoils: 10
+        },
+        {
+            id: 1113,
+            name: 'Prosper Otemuyiwa',
+            level: 'Senior Whistle Blower',
+            avatar: 'http://svgavatars.com/style/svg/15.svg',
+            uncoveredSpoils: 186
+        },
+        {
+            id: 1114,
+            name: 'Lovelyn Tigereek',
+            level: 'Intermediate Whistle Blower',
+            avatar: 'http://svgavatars.com/style/svg/02.svg',
+            uncoveredSpoils: 25
+        },
+        {
+            id: 1115,
+            name: 'Thank-God Okogbulor',
+            level: 'Senior Whistle Blower',
+            avatar: 'http://svgavatars.com/style/svg/03.svg',
+            uncoveredSpoils: 174
+        }];
+
+    res.json(whistleBlowers);
 })
 
 
